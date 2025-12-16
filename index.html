@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" /> <!--sätter teckenkodningen-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--behövs för att media quiery blocket i min css ska fungera -->
+  <title>IZoo</title>
+  <link rel="stylesheet" href="style.css" />   <!--länkar min css fil-->
+  
+</head>
+<body>
+  <div class="background"></div>
+
+  <header>
+    <div class="logoleft">
+      <img src="img/Izoo logo.png" alt="Izoo logo" class="logo"/>
+      <h1>Välkommen till IZoo</h1>
+    </div>
+    
+    <div class="hwrap">   <!--wrappar innehållet i menyn så den inte tar för bred plats-->
+      <nav>
+        <ul class="meny">   <!--lista som blir meny i headern-->
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="djur.html">Våra djur</a></li>
+          <li><a href="om-oss.html">Om oss</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>    <!--en section med en sökruta till vänster och en section för varje djur som är länkade med onclick för att fungera tillsammans med javascript info ruta-->
+    <section class="sidebar">
+      <input type="text" placeholder="Sök djur..." />
+    </section>
+
+<section class="zoo-main">
+  <section class="animal-card" onclick="visaLejonInfo()">
+    <img src="img/lejon.png" alt="Lejon">
+    <h2>Lejon</h2>
+    <p>Kung av savannen!</p>
+  </section>
+
+  <section class="animal-card" onclick="VisaElefantInfo()">
+    <img src="img/elefant.png" alt="Elefant">
+    <h2>Elefant</h2>
+    <p>Störst på land!</p>
+  </section>
+
+  <section class="animal-card" onclick="VisagiraffeInfo()">
+    <img src="img/giraffe.png" alt="Giraff">
+    <h2>Giraff</h2>
+    <p>Högst i träden!</p>
+  </section>
+
+  <section class="animal-card" onclick="visapingvinInfo()">
+    <img src="img/pingvin.png" alt="Pingvin">
+    <h2>Pingvin</h2>
+    <p>Elegant simmare från sydpolen.</p>
+  </section>
+
+  <section class="animal-card" onclick="visazebrainfo()">
+    <img src="img/zebra.png" alt="Zebra">
+    <h2>Zebra</h2>
+    <p>Randigt och snabbt!</p>
+  </section>
+
+  <section class="animal-card" onclick="visatigerinfo()">
+    <img src="img/tiger.png" alt="Tiger">
+    <h2>Tiger</h2>
+    <p>Smidig jägare i djungeln.</p>
+  </section>
+
+  <section class="animal-card" onclick="visaflamingoinfo()">
+    <img src="img/flamingo.png" alt="Flamingo">
+    <h2>Flamingo</h2>
+    <p>Stolt, rosa och stående på ett ben.</p>
+  </section>
+
+  <section class="animal-card" onclick="visakrokodilinfo()">
+    <img src="img/Crocodile.png" alt="Krokodil">
+    <h2>Krokodil</h2>
+    <p>Förhistorisk jägare med käftar av stål.</p>
+  </section>
+
+  <section class="animal-card" onclick="visapandainfo()">
+    <img src="img/panda.png" alt="Panda">
+    <h2>Panda</h2>
+    <p>Bambuälskande björn från Kina.</p>
+  </section>
+
+  <section class="animal-card" onclick="visaapainfo()">
+    <img src="img/apa.png" alt="Apa">
+    <h2>Apa</h2>
+    <p>Busig, klok och klätterglad.</p>
+  </section>
+
+  <section class="animal-card" onclick="visastrutsinfo()">
+    <img src="img/struts.png" alt="Struts">
+    <h2>Struts</h2>
+    <p>Springer snabbt men flyger inte.</p>
+  </section>
+
+  <section class="animal-card" onclick="visanosinfo()">
+    <img src="img/noshorning.png" alt="Noshörning">
+    <h2>Noshörning</h2>
+    <p>Tung, stark och med horn i pannan.</p>
+  </section>
+</section>
+</main>
+
+<!--alert funktion som visar en info ruta när man klickar på ett djur-->
+
+<script>      
+  function visaLejonInfo() {
+    alert(
+      " Namn: Simba\n" +
+      "Typ: Kattdjur\n" +
+      "Färg: Gyllene med mörk man\n" +
+      "Beskrivning: Lejonet är savannens kung.\n" +
+      "Födelseår: 2018"
+    );
+  }
+</script>
+
+<script>
+  function VisaElefantInfo() {
+    alert(
+      " Namn: Tantor\n" +
+      "Typ: Afrikansk elefant\n" +
+      "Färg: Grå\n" +
+      "Beskrivning: Största landlevande djuret.\n" +
+      "Födelseår: 1991"
+    );
+  }
+</script>
+
+<script>
+  function VisagiraffeInfo() {
+    alert(
+      " Namn: Agda\n" +
+      "Typ: Giraffhona\n" +
+      "Färg: gul och brun\n" +
+      "Beskrivning: Världens längsta hals, blå tunga.\n" +
+      "Födelseår: 1999"
+    );
+  }
+</script>
+
+<script>
+  function visapingvinInfo() {
+    alert(
+      " Namn: Cecil\n" +
+      "Typ: Fågel\n" +
+      "Färg: Svart och vit\n" +
+      "Beskrivning: En köldtålig liten filur som bor i de mest extrema miljöerna\n" +
+      "Födelseår: 2010"
+    );
+  }
+</script>
+
+<script>
+  function visazebrainfo() {
+    alert(
+      " Namn: Olof\n" +
+      "Typ: Hästdjur\n" +
+      "Färg: Svart och vit\n" +
+      "Beskrivning: En häst med randigt mönster som lejonen gillar att äta\n" +
+      "Födelseår: 2011"
+    );
+  }
+</script>
+
+<script>
+  function visatigerinfo() {
+    alert(
+      " Namn: Benny\n" +
+      "Typ: Kattdjur\n" +
+      "Färg: Svart och orange\n" +
+      "Beskrivning: Det största kattdjuret på planeten!\n" +
+      "Födelseår: 2015"
+    );
+  }
+</script>
+
+<script>
+  function visaflamingoinfo() {
+    alert(
+      " Namn: Karin\n" +
+      "Typ: Fågel\n" +
+      "Färg: Rosa\n" +
+      "Beskrivning: En stor fågel som gillar att hänga i grupp.\n" +
+      "Födelseår: 2023"
+    );
+  }
+</script>
+
+<script>
+  function visakrokodilinfo() {
+    alert(
+      " Namn: Conny\n" +
+      "Typ: Predator\n" +
+      "Färg: Grön\n" +
+      "Beskrivning: en av dom äldsta predatorerna vi har.\n" +
+      "Födelseår: 1960"
+    );
+  }
+</script>
+
+<script>
+  function visapandainfo() {
+    alert(
+      " Namn: Doris\n" +
+      "Typ: Björn\n" +
+      "Färg: Svart och vit\n" +
+      "Beskrivning: En snäll björn som äter bambuskott\n" +
+      "Födelseår: 1980"
+    );
+  }
+</script>
+
+<script>
+  function visaapainfo() {
+    alert(
+      " Namn: Arne\n" +
+      "Typ: Orangutang\n" +
+      "Färg: brun\n" +
+      "Beskrivning: Kanske den bästa klättraren i världen\n" +
+      "Födelseår: 2000"
+    );
+  }
+</script>
+
+<script>
+  function visastrutsinfo() {
+    alert(
+      " Namn: Sigge Struts\n" +
+      "Typ: fågel\n" +
+      "Färg: svart vit\n" +
+      "Beskrivning: En stor frågel som inte kan flyga\n" +
+      "Födelseår: 2003"
+    );
+  }
+</script>
+
+<script>
+  function visanosinfo() {
+    alert(
+      " Namn: Norman\n" +
+      "Typ: Däggdjur\n" +
+      "Färg: grå\n" +
+      "Beskrivning: Med sina 2 ton är det en riktig bjässe på savannen.\n" +
+      "Födelseår: 2010"
+    );
+  }
+</script>
+</body>
+</html>

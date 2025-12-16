@@ -1,0 +1,148 @@
+body {            /* bestämmer vilket typsnitt jag har för sidan, gör att content börjar från kant*/
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {          /*bestämmer bakgrundsfär i header samt text färg och position*/
+  background-color: rgb(172, 215, 172);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.background {     /*sätter en fast bakgrund som jag länkat till en bild i mappen*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/jungle.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.logo {         /*sätter min loggas storlek*/
+  max-height: 120px;
+  width: auto;
+}
+
+.logoleft {     /*sätter min logga till vänster om min h1 med mellanrum på 5rem*/
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+h1 {            /* ändrat storlek, färg, mellanrum, lagt till skugga, stora bokstäver och rundade hörn på rubriken*/
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f0f0f0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  border-radius: 15px;
+}
+
+main {          /*gör <main> till flexboxcontainer, sätter mellanrum mellan sökruta och djuren samt mellanrum mellan ytterkanter.*/
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.meny {         /*tar bort punkter från listan, lägger menyn horisontellt, lägger meny jämnt över sidan*/
+  list-style: none;
+  margin: 0;
+  display: flex;
+  gap: 1em;
+  background-color: transparent;
+  padding: 1em;
+  justify-content: space-between;
+}
+
+.meny li a {    /*ändrar utseende på meny (listlänkarna)*/
+  text-decoration: none;
+  color: darkgreen;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.meny li a:hover {   /*när man hovrar över meny blir det en vid bakgrund*/
+  background-color: #e6f4e3;
+  color: #004d24;
+}
+
+.hwrap {        /*krymper ihop bredden så den linjerar med rubriken*/
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sidebar {      /*sätter sökdelens bredd till 200 px*/
+  width: 200px;
+}
+
+.zoo-main {     /*gör klassen zoo-main till grid container, lägger djuren i rader om 4st.*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  padding: 1em;
+}
+
+.animal-card {   /* design för "djurkorten", rundade hörn, vit, skugga och centrering av text, mellanrum mellan kort*/
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1em;
+}
+
+.animal-card img {  /* sätter storlek samt rundade hörn */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {   /* Responsiv layout: gör så att mina klasser och innehåll i header ser bra ut i mobilt läge, att djuren hamnar under varandra*/
+  .zoo-main {
+    grid-template-columns: 1fr;
+  }
+  .logoleft {
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.meny {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+main {
+  flex-direction: column;
+}
+
+.sidebar {
+  width: 100%;
+}
+}
+
+
